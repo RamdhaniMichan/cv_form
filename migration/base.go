@@ -20,6 +20,10 @@ func Migrate(w http.ResponseWriter, r *http.Request) {
 func autoMigrate() {
 	db := datasource.OpenDB()
 	db.AutoMigrate(
-		&entity.Book{},
+		&entity.Profile{},
+		&entity.Skill{},
+		&entity.WorkingExperience{},
+		&entity.Education{},
+		&entity.Employment{},
 	)
 }

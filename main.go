@@ -28,8 +28,23 @@ func main() {
 	migrateRoutes := routes.MigrateRoutes{}
 	migrateRoutes.Routing(httpRouter)
 
-	bookRoutes := routes.BookRoute{}
-	bookRoutes.Routing(httpRouter)
+	profileRoutes := routes.ProfileRoute{}
+	profileRoutes.Routing(httpRouter)
+
+	skillRoutes := routes.SkillRoute{}
+	skillRoutes.Routing(httpRouter)
+
+	weRoutes := routes.WERoute{}
+	weRoutes.Routing(httpRouter)
+
+	educationRoutes := routes.EducationRoute{}
+	educationRoutes.Routing(httpRouter)
+
+	employmentRoutes := routes.EmploymentRoute{}
+	employmentRoutes.Routing(httpRouter)
+
+	uploadRoutes := routes.UploadRoute{}
+	uploadRoutes.Routing(httpRouter)
 
 	httpRouter.SERVE()
 
